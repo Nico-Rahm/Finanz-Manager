@@ -7,15 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Finanz_Manager
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+            String file = ConfigurationManager.AppSettings["DatabaseFile"];
+            if(file == "")
+            {
+
+            }
         }
 
+        private void neuesKontoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTaking_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
