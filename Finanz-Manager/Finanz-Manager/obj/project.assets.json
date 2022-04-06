@@ -919,25 +919,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nico\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nico_\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\DH\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
+      "projectUniqueName": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
       "projectName": "Finanz-Manager",
-      "projectPath": "H:\\DH\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
-      "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
-      "outputPath": "H:\\DH\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\obj\\",
+      "projectPath": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
+      "packagesPath": "C:\\Users\\nico_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nico_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
