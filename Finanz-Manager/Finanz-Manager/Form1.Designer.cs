@@ -166,6 +166,7 @@ namespace Finanz_Manager
             this.buttonTransfer.TabIndex = 5;
             this.buttonTransfer.Text = "Übertrag";
             this.buttonTransfer.UseVisualStyleBackColor = true;
+            this.buttonTransfer.Click += new System.EventHandler(this.buttonTransfer_Click);
             // 
             // MainForm
             // 

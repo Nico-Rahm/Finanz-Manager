@@ -17,15 +17,15 @@ namespace Finanz_Manager
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            bool errorOccured = false;
+            bool tErrorOccured = false;
 
             Transaction transaction = new Transaction();
             transaction.setTableName(this.comboBoxAccount.Text);
             transaction.setTransactionDateTime(this.dateTimePicker1.Value);
 
             int tAmount;
-            bool amountIsParsable = Int32.TryParse(this.textBoxAmount.Text, out tAmount);
-            if(amountIsParsable)
+            bool tAmountIsParsable = Int32.TryParse(this.textBoxAmount.Text, out tAmount);
+            if(tAmountIsParsable)
             {
                 if (radioButtonSpending.Checked)
                 {
@@ -35,12 +35,12 @@ namespace Finanz_Manager
             }
             else
             {
-                errorOccured = true;
+                tErrorOccured = true;
             }
 
             transaction.setTransactionDescription(this.textBoxDescription.Text);
 
-            if (errorOccured)
+            if (tErrorOccured)
             {
                 MessageBox.Show("Bitte überprüfen Sie Ihre Eingeben!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

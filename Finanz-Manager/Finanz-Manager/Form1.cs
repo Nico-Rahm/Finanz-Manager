@@ -33,5 +33,10 @@ namespace Finanz_Manager
             NewTransaction newTransaction = new NewTransaction();
             newTransaction.Visible = true;
         }
+
+        private void buttonTransfer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
