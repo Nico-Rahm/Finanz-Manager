@@ -40,8 +40,7 @@ namespace Finanz_Manager
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dBVerbindungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelAccountName = new System.Windows.Forms.Label();
-            this.buttonTaking = new System.Windows.Forms.Button();
-            this.buttonSpending = new System.Windows.Forms.Button();
+            this.buttonTransaction = new System.Windows.Forms.Button();
             this.buttonTransfer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -59,26 +58,33 @@ namespace Finanz_Manager
             this.Time,
             this.Description,
             this.Amount});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 56);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 528);
             this.dataGridView1.TabIndex = 0;
             // 
             // Date
             // 
             this.Date.HeaderText = "Datum";
+            this.Date.MinimumWidth = 6;
             this.Date.Name = "Date";
+            this.Date.Width = 125;
             // 
             // Time
             // 
             this.Time.HeaderText = "Uhrzeit";
+            this.Time.MinimumWidth = 6;
             this.Time.Name = "Time";
+            this.Time.Width = 125;
             // 
             // Description
             // 
             this.Description.HeaderText = "Beschreibung";
+            this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
             this.Description.Width = 450;
             // 
@@ -87,15 +93,18 @@ namespace Finanz_Manager
             this.Amount.HeaderText = "Betrag";
             this.Amount.MinimumWidth = 100;
             this.Amount.Name = "Amount";
+            this.Amount.Width = 125;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kontenToolStripMenuItem,
             this.einstellungenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1024, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,13 +113,13 @@ namespace Finanz_Manager
             this.kontenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.neuesKontoToolStripMenuItem});
             this.kontenToolStripMenuItem.Name = "kontenToolStripMenuItem";
-            this.kontenToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.kontenToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.kontenToolStripMenuItem.Text = "Konten";
             // 
             // neuesKontoToolStripMenuItem
             // 
             this.neuesKontoToolStripMenuItem.Name = "neuesKontoToolStripMenuItem";
-            this.neuesKontoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.neuesKontoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.neuesKontoToolStripMenuItem.Text = "Neues Konto";
             this.neuesKontoToolStripMenuItem.Click += new System.EventHandler(this.neuesKontoToolStripMenuItem_Click);
             // 
@@ -119,63 +128,56 @@ namespace Finanz_Manager
             this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dBVerbindungToolStripMenuItem});
             this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
             this.einstellungenToolStripMenuItem.Text = "Einstellungen";
             // 
             // dBVerbindungToolStripMenuItem
             // 
             this.dBVerbindungToolStripMenuItem.Name = "dBVerbindungToolStripMenuItem";
-            this.dBVerbindungToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dBVerbindungToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.dBVerbindungToolStripMenuItem.Text = "DB-Verbindung";
             // 
             // labelAccountName
             // 
             this.labelAccountName.AutoSize = true;
-            this.labelAccountName.Location = new System.Drawing.Point(12, 24);
+            this.labelAccountName.Location = new System.Drawing.Point(14, 32);
             this.labelAccountName.Name = "labelAccountName";
-            this.labelAccountName.Size = new System.Drawing.Size(50, 15);
+            this.labelAccountName.Size = new System.Drawing.Size(62, 20);
             this.labelAccountName.TabIndex = 2;
             this.labelAccountName.Text = "Konto: -";
             // 
-            // buttonTaking
+            // buttonTransaction
             // 
-            this.buttonTaking.Location = new System.Drawing.Point(794, 42);
-            this.buttonTaking.Name = "buttonTaking";
-            this.buttonTaking.Size = new System.Drawing.Size(75, 46);
-            this.buttonTaking.TabIndex = 3;
-            this.buttonTaking.Text = "Neue Einnahme";
-            this.buttonTaking.UseVisualStyleBackColor = true;
-            this.buttonTaking.Click += new System.EventHandler(this.buttonTaking_Click);
-            // 
-            // buttonSpending
-            // 
-            this.buttonSpending.Location = new System.Drawing.Point(794, 94);
-            this.buttonSpending.Name = "buttonSpending";
-            this.buttonSpending.Size = new System.Drawing.Size(75, 46);
-            this.buttonSpending.TabIndex = 4;
-            this.buttonSpending.Text = "Neue Ausgabe";
-            this.buttonSpending.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Location = new System.Drawing.Point(907, 56);
+            this.buttonTransaction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonTransaction.Name = "buttonTransaction";
+            this.buttonTransaction.Size = new System.Drawing.Size(105, 61);
+            this.buttonTransaction.TabIndex = 3;
+            this.buttonTransaction.Text = "Neue Transaktion";
+            this.buttonTransaction.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
             // 
             // buttonTransfer
             // 
-            this.buttonTransfer.Location = new System.Drawing.Point(794, 146);
+            this.buttonTransfer.Location = new System.Drawing.Point(907, 195);
+            this.buttonTransfer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonTransfer.Name = "buttonTransfer";
-            this.buttonTransfer.Size = new System.Drawing.Size(75, 46);
+            this.buttonTransfer.Size = new System.Drawing.Size(86, 61);
             this.buttonTransfer.TabIndex = 5;
             this.buttonTransfer.Text = "Übertrag";
             this.buttonTransfer.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 449);
+            this.ClientSize = new System.Drawing.Size(1024, 599);
             this.Controls.Add(this.buttonTransfer);
-            this.Controls.Add(this.buttonSpending);
-            this.Controls.Add(this.buttonTaking);
+            this.Controls.Add(this.buttonTransaction);
             this.Controls.Add(this.labelAccountName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "Finanz-Manager";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,8 +197,7 @@ namespace Finanz_Manager
         private System.Windows.Forms.Label labelAccountName;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dBVerbindungToolStripMenuItem;
-        private System.Windows.Forms.Button buttonTaking;
-        private System.Windows.Forms.Button buttonSpending;
+        private System.Windows.Forms.Button buttonTransaction;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;

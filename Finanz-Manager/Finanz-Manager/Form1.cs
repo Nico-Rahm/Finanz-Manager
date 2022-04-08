@@ -28,9 +28,10 @@ namespace Finanz_Manager
 
         }
 
-        private void buttonTaking_Click(object sender, EventArgs e)
+        private void buttonTransaction_Click(object sender, EventArgs e)
         {
-
+            NewTransaction newTransaction = new NewTransaction();
+            newTransaction.Visible = true;
         }
     }
 }
