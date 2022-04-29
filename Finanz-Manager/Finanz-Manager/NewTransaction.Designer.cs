@@ -44,9 +44,10 @@ namespace Finanz_Manager
             // radioButtonTaking
             // 
             this.radioButtonTaking.AutoSize = true;
-            this.radioButtonTaking.Location = new System.Drawing.Point(12, 12);
+            this.radioButtonTaking.Location = new System.Drawing.Point(10, 9);
+            this.radioButtonTaking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTaking.Name = "radioButtonTaking";
-            this.radioButtonTaking.Size = new System.Drawing.Size(95, 24);
+            this.radioButtonTaking.Size = new System.Drawing.Size(78, 19);
             this.radioButtonTaking.TabIndex = 0;
             this.radioButtonTaking.TabStop = true;
             this.radioButtonTaking.Text = "Einnahme";
@@ -55,9 +56,10 @@ namespace Finanz_Manager
             // radioButtonSpending
             // 
             this.radioButtonSpending.AutoSize = true;
-            this.radioButtonSpending.Location = new System.Drawing.Point(12, 42);
+            this.radioButtonSpending.Location = new System.Drawing.Point(10, 32);
+            this.radioButtonSpending.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSpending.Name = "radioButtonSpending";
-            this.radioButtonSpending.Size = new System.Drawing.Size(88, 24);
+            this.radioButtonSpending.Size = new System.Drawing.Size(71, 19);
             this.radioButtonSpending.TabIndex = 1;
             this.radioButtonSpending.TabStop = true;
             this.radioButtonSpending.Text = "Ausgabe";
@@ -66,59 +68,63 @@ namespace Finanz_Manager
             // labelAccount
             // 
             this.labelAccount.AutoSize = true;
-            this.labelAccount.Location = new System.Drawing.Point(145, 14);
+            this.labelAccount.Location = new System.Drawing.Point(127, 10);
             this.labelAccount.Name = "labelAccount";
-            this.labelAccount.Size = new System.Drawing.Size(52, 20);
+            this.labelAccount.Size = new System.Drawing.Size(42, 15);
             this.labelAccount.TabIndex = 2;
             this.labelAccount.Text = "Konto:";
             // 
             // textBoxAmount
             // 
-            this.textBoxAmount.Location = new System.Drawing.Point(145, 108);
+            this.textBoxAmount.Location = new System.Drawing.Point(127, 81);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(125, 27);
+            this.textBoxAmount.Size = new System.Drawing.Size(110, 23);
             this.textBoxAmount.TabIndex = 3;
             // 
             // comboBoxAccount
             // 
             this.comboBoxAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAccount.FormattingEnabled = true;
-            this.comboBoxAccount.Location = new System.Drawing.Point(145, 41);
+            this.comboBoxAccount.Location = new System.Drawing.Point(127, 31);
+            this.comboBoxAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxAccount.Name = "comboBoxAccount";
-            this.comboBoxAccount.Size = new System.Drawing.Size(229, 28);
+            this.comboBoxAccount.Size = new System.Drawing.Size(201, 23);
             this.comboBoxAccount.TabIndex = 4;
             // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
-            this.labelAmount.Location = new System.Drawing.Point(33, 111);
+            this.labelAmount.Location = new System.Drawing.Point(29, 83);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(56, 20);
+            this.labelAmount.Size = new System.Drawing.Size(44, 15);
             this.labelAmount.TabIndex = 5;
             this.labelAmount.Text = "Betrag:";
             // 
             // labelDesctiption
             // 
             this.labelDesctiption.AutoSize = true;
-            this.labelDesctiption.Location = new System.Drawing.Point(33, 144);
+            this.labelDesctiption.Location = new System.Drawing.Point(29, 108);
             this.labelDesctiption.Name = "labelDesctiption";
-            this.labelDesctiption.Size = new System.Drawing.Size(96, 20);
+            this.labelDesctiption.Size = new System.Drawing.Size(78, 15);
             this.labelDesctiption.TabIndex = 7;
             this.labelDesctiption.Text = "Bezeichnung:";
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(145, 141);
+            this.textBoxDescription.Location = new System.Drawing.Point(127, 106);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(229, 122);
+            this.textBoxDescription.Size = new System.Drawing.Size(201, 92);
             this.textBoxDescription.TabIndex = 6;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(280, 279);
+            this.buttonSave.Location = new System.Drawing.Point(245, 209);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(94, 29);
+            this.buttonSave.Size = new System.Drawing.Size(82, 22);
             this.buttonSave.TabIndex = 8;
             this.buttonSave.Text = "Speichern";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -126,16 +132,17 @@ namespace Finanz_Manager
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 75);
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 56);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(362, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(317, 23);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // NewTransaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 317);
+            this.ClientSize = new System.Drawing.Size(341, 238);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelDesctiption);
@@ -146,6 +153,7 @@ namespace Finanz_Manager
             this.Controls.Add(this.labelAccount);
             this.Controls.Add(this.radioButtonSpending);
             this.Controls.Add(this.radioButtonTaking);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NewTransaction";
             this.Text = "Neue Transaktion";
             this.ResumeLayout(false);

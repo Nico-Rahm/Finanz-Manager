@@ -10,9 +10,11 @@ namespace Finanz_Manager
 {
     public partial class ChooseAccount : Form
     {
-        public ChooseAccount()
+        MainForm mainForm;
+        public ChooseAccount(MainForm pMainForm)
         {
             InitializeComponent();
+            this.mainForm = pMainForm;
         }
 
         private void ChooseAccount_Load(object sender, EventArgs e)
@@ -23,6 +25,16 @@ namespace Finanz_Manager
                 comboBoxAccount.Items.Add(account.getAccountName());
                 
             }
+        }
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+            if(comboBoxAccount.SelectedItem.ToString() != "")
+            {
+                mainForm.loadTransactions(comboBoxAccount.SelectedItem.ToString());
+                this.Close();
+            }
+            
         }
     }
 }

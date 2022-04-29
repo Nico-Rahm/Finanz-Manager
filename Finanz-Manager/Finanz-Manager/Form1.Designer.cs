@@ -30,10 +30,6 @@ namespace Finanz_Manager
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kontenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neuesKontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +38,9 @@ namespace Finanz_Manager
             this.buttonTransaction = new System.Windows.Forms.Button();
             this.buttonTransfer = new System.Windows.Forms.Button();
             this.buttonChooseAccount = new System.Windows.Forms.Button();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +53,7 @@ namespace Finanz_Manager
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Time,
+            this.time,
             this.Description,
             this.Amount});
             this.dataGridView1.Location = new System.Drawing.Point(12, 42);
@@ -65,34 +63,6 @@ namespace Finanz_Manager
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(776, 396);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Datum";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.Width = 125;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Uhrzeit";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            this.Time.Width = 125;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Beschreibung";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
-            this.Description.Width = 450;
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Betrag";
-            this.Amount.MinimumWidth = 100;
-            this.Amount.Name = "Amount";
-            this.Amount.Width = 125;
             // 
             // menuStrip1
             // 
@@ -117,14 +87,14 @@ namespace Finanz_Manager
             // neuesKontoToolStripMenuItem
             // 
             this.neuesKontoToolStripMenuItem.Name = "neuesKontoToolStripMenuItem";
-            this.neuesKontoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuesKontoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.neuesKontoToolStripMenuItem.Text = "Neues Konto";
             this.neuesKontoToolStripMenuItem.Click += new System.EventHandler(this.neuesKontoToolStripMenuItem_Click);
             // 
             // kontenToolStripMenuItem1
             // 
             this.kontenToolStripMenuItem1.Name = "kontenToolStripMenuItem1";
-            this.kontenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.kontenToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.kontenToolStripMenuItem1.Text = "Konten";
             this.kontenToolStripMenuItem1.Click += new System.EventHandler(this.kontenToolStripMenuItem1_Click);
             // 
@@ -166,6 +136,25 @@ namespace Finanz_Manager
             this.buttonChooseAccount.Text = "Konto wählen";
             this.buttonChooseAccount.UseVisualStyleBackColor = true;
             // 
+            // time
+            // 
+            this.time.HeaderText = "Zeit";
+            this.time.Name = "time";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Beschreibung";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.Width = 450;
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Betrag";
+            this.Amount.MinimumWidth = 100;
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 125;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -195,13 +184,12 @@ namespace Finanz_Manager
         private System.Windows.Forms.ToolStripMenuItem neuesKontoToolStripMenuItem;
         private System.Windows.Forms.Label labelAccountName;
         private System.Windows.Forms.Button buttonTransaction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.Button buttonTransfer;
         private System.Windows.Forms.ToolStripMenuItem kontenToolStripMenuItem1;
         private System.Windows.Forms.Button buttonChooseAccount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
     }
 }
 

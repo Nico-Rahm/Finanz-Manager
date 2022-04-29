@@ -13,6 +13,12 @@ namespace Finanz_Manager
         public NewTransaction()
         {
             InitializeComponent();
+            List<Account> accounts = DBconnector.getAccounts();
+            foreach (Account account in accounts)
+            {
+                comboBoxAccount.Items.Add(account.getAccountName());
+
+            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -20,13 +26,28 @@ namespace Finanz_Manager
             bool tErrorOccured = false;
 
             Transaction transaction = new Transaction();
-            transaction.setTableName(this.comboBoxAccount.Text);
+
+            int accountId = 0;
+
+
+            transaction.setAccountId(accountId);
+
+
+
+
             transaction.setTransactionDateTime(this.dateTimePicker1.Value);
 
-            int tAmount;
-            bool tAmountIsParsable = Int32.TryParse(this.textBoxAmount.Text, out tAmount);
-            if(tAmountIsParsable)
+            String[] amountSeperated = this.textBoxAmount.Text.Split(",");
+            int tAmountEuro;
+            int tAmountCent;
+
+            bool tAmountEuroIsParsable = Int32.TryParse(amountSeperated[0], out tAmountEuro);
+            bool tAmountCentIsParsable = Int32.TryParse(amountSeperated[1], out tAmountCent);
+
+
+            if(tAmountEuroIsParsable && tAmountCentIsParsable)
             {
+                int tAmount = (tAmountEuro * 100) + tAmountCent;
                 if (radioButtonSpending.Checked)
                 {
                     tAmount = 0 - tAmount;
@@ -47,6 +68,7 @@ namespace Finanz_Manager
             else
             {
                 DBconnector.addTransaction(transaction);
+                this.Close();
             }
         }
     }

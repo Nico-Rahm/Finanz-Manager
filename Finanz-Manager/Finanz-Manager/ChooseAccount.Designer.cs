@@ -59,6 +59,7 @@ namespace Finanz_Manager
             this.buttonShow.TabIndex = 2;
             this.buttonShow.Text = "Anzeigen";
             this.buttonShow.UseVisualStyleBackColor = true;
+            this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
             // ChooseAccount
             // 

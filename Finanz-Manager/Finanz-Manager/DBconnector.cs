@@ -17,7 +17,11 @@ namespace Finanz_Manager
 
         public static void addTransaction(Transaction pTransaction)
         {
- 
+            
+            using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
+            {
+
+            }
         } 
 
         public static void addAccount(Account pAccount)
@@ -45,9 +49,25 @@ namespace Finanz_Manager
             }
         }
 
-        public static List<Dataset> getTransaction()
+        public static List<Transaction> getTransactions(String pAccountName)
         {
-            return null;
+            using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
+            {
+                List<String> account = cnn.Query<String>("SELECT id FROM Accounts WHERE accountName = '" + pAccountName + "'").ToList();
+                int accountId = Int32.Parse(account[0]);
+                var output = cnn.Query<Transaction>("SELECT * FROM Transactions WHERE accountId = " + accountId, new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
+        public int getAccountIdFromName(String pAccountName)
+        {
+            using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
+            {
+                List<String> account = cnn.Query<String>("SELECT id FROM Accounts WHERE accountName = '" + pAccountName + "'").ToList();
+                int accountId = Int32.Parse(account[0]);
+                return accountId;
+            }
         }
 
     }

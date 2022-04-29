@@ -9,6 +9,7 @@ namespace Finanz_Manager
         private DateTime transactionDateTime;
         private String transactionDescription;
         private int transactionAmountEuroCents;
+        private int accountId;
 
         public void setTransactionDateTime(DateTime pDateTime)
         {
@@ -40,9 +41,20 @@ namespace Finanz_Manager
             return this.transactionAmountEuroCents;
         }
 
+        public void setAccountId(int pAccountId)
+        {
+            this.accountId = pAccountId;
+        }
+
+        public int getAccountId()
+        {
+            return this.accountId;
+        }
+
         public Transaction()
         {
             this.type = "Transaction";
         }
+
     }
 }
