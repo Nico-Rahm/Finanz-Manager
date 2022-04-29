@@ -25,7 +25,8 @@ namespace Finanz_Manager
 
         private void neuesKontoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NewAccount newAccount = new NewAccount();
+            newAccount.Visible = true;
         }
 
         private void buttonTransaction_Click(object sender, EventArgs e)
@@ -37,6 +38,12 @@ namespace Finanz_Manager
         private void buttonTransfer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void kontenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ChooseAccount chooseAccount = new ChooseAccount();
+            chooseAccount.Visible = true;
         }
     }
 }

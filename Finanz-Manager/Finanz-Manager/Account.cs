@@ -8,6 +8,7 @@ namespace Finanz_Manager
     {
         private int accountID;
         private String accountName;
+        private String description;
 
         public void setAccountID(int pAccountID)
         {
@@ -29,9 +30,25 @@ namespace Finanz_Manager
             return this.accountName;
         }
 
+        public void setDescription(String pDescription)
+        {
+            this.description = pDescription;
+        }
+
+        public String getDescription()
+        {
+            return this.description;
+        }
+
         public Account()
         {
             this.type = "Account";
+        }
+
+        public Account(String pAccountName, String pAccountDescription)
+        {
+            this.accountName = pAccountName;
+            this.description = pAccountDescription;
         }
     }
 }

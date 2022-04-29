@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj": {}
+    "H:\\DH\\Advanced swe\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj": {
+    "H:\\DH\\Advanced swe\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
+        "projectUniqueName": "H:\\DH\\Advanced swe\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
         "projectName": "Finanz-Manager",
-        "projectPath": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
-        "packagesPath": "C:\\Users\\nico_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nico_\\OneDrive\\Dokumente\\Dokumente\\DHBW\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\obj\\",
+        "projectPath": "H:\\DH\\Advanced swe\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager.csproj",
+        "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
+        "outputPath": "H:\\DH\\Advanced swe\\Finanz-Manager\\Finanz-Manager\\Finanz-Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\nico_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,6 +45,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.28, )"
@@ -71,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

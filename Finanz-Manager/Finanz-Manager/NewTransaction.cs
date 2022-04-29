@@ -46,7 +46,7 @@ namespace Finanz_Manager
             }
             else
             {
-                DBconnector.writeDataset(transaction);
+                DBconnector.addTransaction(transaction);
             }
         }
     }
