@@ -33,12 +33,12 @@ namespace Finanz_Manager
                 tErrorOccured = true;
             }
 
-            transactionSourceAccount.setTableName(comboBoxSourceAccount.Text);
-            transactionSourceAccount.setTransactionDateTime(dateTimePicker1.Value);
+            transactionSourceAccount.setAccountId(Int32.Parse(comboBoxSourceAccount.Text));
+            transactionSourceAccount.setTransactionDateTime(dateTimePicker1.Value.ToString());
             transactionSourceAccount.setTransactionDescription(textBoxDescription.Text);
 
-            transactionTargetAccount.setTableName(comboBoxTargetAccount.Text);
-            transactionTargetAccount.setTransactionDateTime(dateTimePicker1.Value);
+            transactionTargetAccount.setAccountId(Int32.Parse(comboBoxTargetAccount.Text));
+            transactionTargetAccount.setTransactionDateTime(dateTimePicker1.Value.ToString());
             transactionTargetAccount.setTransactionDescription(textBoxDescription.Text);
 
             if (tErrorOccured)

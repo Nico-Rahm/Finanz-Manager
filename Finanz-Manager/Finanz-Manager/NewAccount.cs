@@ -10,15 +10,18 @@ namespace Finanz_Manager
 {
     public partial class NewAccount : Form
     {
-        public NewAccount()
+        private MainForm mainForm;
+        public NewAccount(MainForm pMainForm)
         {
             InitializeComponent();
+            this.mainForm = pMainForm;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Account newAccount = new Account(this.textBoxAccountName.Text, this.textBoxDescription.Text);
             DBconnector.addAccount(newAccount);
+
             this.Close();
         }
     }

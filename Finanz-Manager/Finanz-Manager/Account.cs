@@ -4,11 +4,13 @@ using System.Text;
 
 namespace Finanz_Manager
 {
-    class Account : Dataset
+    public class Account : Dataset
     {
         private int accountID;
         private String accountName;
         private String description;
+        private String balance;
+        private List<Transaction> accountTransactions = new List<Transaction>();
 
         public void setAccountID(int pAccountID)
         {
@@ -38,6 +40,26 @@ namespace Finanz_Manager
         public String getDescription()
         {
             return this.description;
+        }
+
+        public List<Transaction> getTransactions()
+        {
+            return this.accountTransactions;
+        }
+
+        public void readTransactions()
+        {
+            this.accountTransactions = DBconnector.getTransactions(this.accountName);
+        }
+
+        public int getBalance()
+        {
+            int balance = 0;
+            foreach(Transaction transaction in this.accountTransactions)
+            {
+                balance = balance + transaction.getTransactionAmount();
+            }
+            return balance;
         }
 
         public Account()

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Finanz_Manager
 {
-    class Dataset
+    public class Dataset
     {
         //protected String tableName;
         protected String type = "Dataset";

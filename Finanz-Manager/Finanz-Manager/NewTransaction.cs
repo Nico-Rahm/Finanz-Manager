@@ -10,7 +10,8 @@ namespace Finanz_Manager
 {
     public partial class NewTransaction : Form
     {
-        public NewTransaction()
+        MainForm mainForm;
+        public NewTransaction(MainForm pMainForm)
         {
             InitializeComponent();
             List<Account> accounts = DBconnector.getAccounts();
@@ -19,6 +20,7 @@ namespace Finanz_Manager
                 comboBoxAccount.Items.Add(account.getAccountName());
 
             }
+            mainForm = pMainForm;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -29,13 +31,13 @@ namespace Finanz_Manager
 
             int accountId = 0;
 
-
+            accountId = DBconnector.getAccountIdFromName(this.comboBoxAccount.Text);
             transaction.setAccountId(accountId);
 
 
 
 
-            transaction.setTransactionDateTime(this.dateTimePicker1.Value);
+            transaction.setTransactionDateTime(this.dateTimePicker1.Value.ToString()) ;
 
             String[] amountSeperated = this.textBoxAmount.Text.Split(",");
             int tAmountEuro;
@@ -68,6 +70,7 @@ namespace Finanz_Manager
             else
             {
                 DBconnector.addTransaction(transaction);
+                mainForm.refreshObserver(accountId);
                 this.Close();
             }
         }

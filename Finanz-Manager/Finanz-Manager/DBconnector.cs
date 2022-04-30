@@ -8,35 +8,25 @@ using System.Text;
 
 namespace Finanz_Manager
 {
-    static class DBconnector
+    public static class DBconnector
     {
-        private static String loadConnectionString(string id = "Default")
-        {
-            return "Data Source =.\\Data.db; Version = 3\" providerName=\"System.Data.SqlClient";
-        }
 
         public static void addTransaction(Transaction pTransaction)
         {
-            
             using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
             {
-
+                cnn.Execute("INSERT INTO Transactions (accountId, amountEuroCents, transactionDateTime, description) values (" +
+                    pTransaction.getAccountId() + ", " + pTransaction.getTransactionAmount() + ", '" + 
+                    pTransaction.getTransactionDateTime() + "', '" + pTransaction.getTransactionDescription() + "')");
             }
         } 
 
         public static void addAccount(Account pAccount)
         {
             using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
-            {
-                //if(pAccount.getDescription() != "")
-                //{
-                    cnn.Execute("INSERT INTO Accounts (accountName, description) values ('" + pAccount.getAccountName() + "', '" + pAccount.getDescription() + "')");
-                //}
-               // else
-                //{
-                //    cnn.Execute("INSERT INTO Accounts (accountName) values ('giroKonto')", pAccount);
-                //}
-                
+            {               
+                cnn.Execute("INSERT INTO Accounts (accountName, description) values ('" + pAccount.getAccountName() + "', '" + pAccount.getDescription() + "')");
+
             }
         }
 
@@ -60,7 +50,7 @@ namespace Finanz_Manager
             }
         }
 
-        public int getAccountIdFromName(String pAccountName)
+        public static int getAccountIdFromName(String pAccountName)
         {
             using (IDbConnection cnn = new SQLiteConnection("Data Source =.\\Data.db; Version = 3"))
             {

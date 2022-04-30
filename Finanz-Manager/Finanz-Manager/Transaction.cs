@@ -4,19 +4,19 @@ using System.Text;
 
 namespace Finanz_Manager
 {
-    class Transaction : Dataset
+    public class Transaction : Dataset
     {
-        private DateTime transactionDateTime;
+        private String transactionDateTime;
         private String transactionDescription;
         private int transactionAmountEuroCents;
         private int accountId;
 
-        public void setTransactionDateTime(DateTime pDateTime)
+        public void setTransactionDateTime(String pDateTime)
         {
             this.transactionDateTime = pDateTime;
         }
 
-        public DateTime getTransactionDateTime()
+        public String getTransactionDateTime()
         {
             return this.transactionDateTime;
         }

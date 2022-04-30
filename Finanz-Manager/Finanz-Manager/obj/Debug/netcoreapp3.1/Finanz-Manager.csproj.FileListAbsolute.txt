@@ -72,17 +72,8 @@ H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcor
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Finanz-Manager.runtimeconfig.dev.json
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Finanz-Manager.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Finanz-Manager.pdb
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Dapper.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\MySql.Data.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\ZstdNet.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
-H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
 H:\DH\Advanced swe\Finanz-Manager\Finanz-Manager\Finanz-Manager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
